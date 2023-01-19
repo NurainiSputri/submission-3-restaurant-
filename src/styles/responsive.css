@@ -1,0 +1,77 @@
+#restaurants {
+  display: grid;
+  grid-gap: 30px;
+}
+
+
+@media screen and (max-width: 599px) {
+  nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 200px;
+    position: absolute;
+    min-height: 44px;
+    min-width: 44px;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__links li {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+
+  footer{
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #hamburgerButton {
+    display: none;
+  }
+
+  .nav__links li{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  footer{
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #restaurants {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #restaurants {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container img{
+    min-width: 1000px;
+  }
+}
